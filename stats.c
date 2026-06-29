@@ -1,0 +1,24 @@
+//write a small routine to calculate stats of a file
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+#include <time.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdarg.h>
+#include <errno.h>
+#include <limits.h>
+#include <float.h>
+#include <ctype.h>
+#include <locale.h>
+#include <wchar.h>
+#include <wctype.h>
+#include <wint_t.h>
+#include <wctype_t.h>
+#include <wctype_t.h>
