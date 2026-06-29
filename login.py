@@ -1,26 +1,21 @@
 # creat login with python
+ 
+#!/bin/bash
 
-import getpass
+echo "======================="
+echo "       Login Page      "
+echo "======================="
 
-def check_credentials(username, password):
-    # For demo purposes, using a hardcoded username and password.
-    # In a real app, replace with proper user db/check.
-    valid_username = "admin"
-    valid_password = "password123"
-    return username == valid_username and password == valid_password
+read -p "Username: " username
+read -sp "Password: " password
+echo
 
-def login():
-    print("=== Login Page ===")
-    username = input("Username: ")
-    password = getpass.getpass("Password: ")
-    if check_credentials(username, password):
-        print("Login successful! Welcome,", username)
-        return True
-    else:
-        print("Invalid username or password. Please try again.")
-        return False
+# Demo credentials
+correct_user="admin"
+correct_pass="password123"
 
-if __name__ == "__main__":
-    # Loop until successful login
-    while not login():
-        pass
+if [[ "$username" == "$correct_user" && "$password" == "$correct_pass" ]]; then
+    echo "Login successful. Welcome, $username!"
+else
+    echo "Login failed. Invalid credentials."
+fi
